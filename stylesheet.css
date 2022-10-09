@@ -1,4 +1,177 @@
 body {
 	background-image: url(./images/odinbackground.jpeg);
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	/* background-attachment: scroll; */
+	/* background-position: fixed; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: "Cinzel Decorative", cursive;
+	min-width: fit-content;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+	position: sticky;
+	top: 0;
+}
+nav ul {
+	display: flex;
+	gap: 10px;
+	margin-right: 6px;
+}
+nav a {
+	transition: 0.5s ease-in-out;
+}
+nav a:hover {
+	color: #cdd307;
+	transition: 0.5s ease-in-out;
+}
+.odinlogo {
+	display: flex;
+	margin-left: 6px;
+}
+.odinlogo img {
+	height: 25px;
+	width: 25px;
+}
+.odin-bio {
+	border: 10px solid;
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+	margin-bottom: 300px;
+	border-radius: 250px;
+	min-width: min-content;
+}
+.odin-bio-left h1 {
+	text-align: center;
+	margin: 0;
+	transition: 0.5s ease-in-out;
+}
+h1::first-letter {
+	font-size: 50px;
+}
+.odin-bio-left h1:hover {
+	color: #cdd307;
+	transition: 0.5s ease-in-out;
+}
+
+#iowt {
+	display: block;
+	margin: auto;
+	border-radius: 250px;
+	padding: 6px;
+	margin-top: 3px;
+	transition: all 0.75s linear;
+}
+
+#iowt:hover {
+	width: 220px;
+	padding: 8px;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: "Cinzel Decorative", cursive;
+	background-color: #424ef5;
+	color: #cdd307;
+	transition: all 0.75s linear;
+}
+.odin-bio-left {
+	border-top-left-radius: 250px;
+	border-bottom-left-radius: 250px;
+	font-size: small;
+	padding-left: 40px;
+	display: block;
+}
+.odin-bio-right {
+	position: relative;
+}
+.odin-bio img {
+	object-fit: none;
+	object-position: top;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.top-img {
+	position: absolute;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: 0.5s ease-out;
+}
+.top-img:hover {
+	opacity: 1;
+	object-fit: cover;
+	object-position: center;
+	transition: 0.5s ease-out;
+	transform: rotate(-360deg);
+}
+
+.odin-bio div {
+	width: 300px;
+	height: 300px;
+}
+.the-realms h3 {
+	text-align: center;
+}
+.realms {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+	padding: 20px;
+}
+.realms div {
+	border: 5px solid black;
+	border-radius: 35px;
+	height: 325px;
+	width: 300px;
+	font-size: small;
+}
+.realms p {
+	width: 250px;
+	text-align: center;
+	margin: auto;
+	margin-top: 12px;
+}
+.realms img {
+	width: 300px;
+	height: 150px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+.quote-sec {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+	border-radius: 30px;
+	padding: 30px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+.quote p {
+	text-align: left;
+	margin-bottom: 20px;
+}
+.sig {
+	margin: auto;
+}
+.sig:hover {
+	font-family: "Splash", cursive;
+	font-size: 30px;
+	color: #cdd307;
+
+	transition: 1.5s ease-out;
+}
+
+footer {
+	display: flex;
+	font-size: small;
 }
