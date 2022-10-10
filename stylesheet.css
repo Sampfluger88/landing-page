@@ -1,9 +1,10 @@
 body {
 	background-image: url(./images/odinbackground.jpeg);
-	background-size: contain;
+	height: 100vh;
+	background-size: cover;
 	background-repeat: no-repeat;
-	/* background-attachment: scroll; */
-	/* background-position: fixed; */
+	background-attachment: fixed;
+	background-position: top;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -15,9 +16,11 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 30px;
+	height: 35px;
 	position: sticky;
+	color: #cdd307;
 	top: 0;
+	background-color: rgba(66, 69, 67, 0.5);
 }
 nav ul {
 	display: flex;
@@ -26,6 +29,7 @@ nav ul {
 }
 nav a {
 	transition: 0.5s ease-in-out;
+	color: whitesmoke;
 }
 nav a:hover {
 	color: #cdd307;
@@ -46,19 +50,14 @@ nav a:hover {
 	margin-top: 300px;
 	margin-bottom: 300px;
 	border-radius: 250px;
-	min-width: min-content;
+	background-color: rgba(66, 69, 67, 0.7);
 }
 .odin-bio-left h1 {
 	text-align: center;
-	margin: 0;
-	transition: 0.5s ease-in-out;
+	margin: 6px;
 }
 h1::first-letter {
 	font-size: 50px;
-}
-.odin-bio-left h1:hover {
-	color: #cdd307;
-	transition: 0.5s ease-in-out;
 }
 
 #iowt {
@@ -66,29 +65,37 @@ h1::first-letter {
 	margin: auto;
 	border-radius: 250px;
 	padding: 6px;
-	margin-top: 3px;
+	margin-top: 10px;
 	transition: all 0.75s linear;
 }
 
 #iowt:hover {
-	width: 220px;
+	width: 250px;
 	padding: 8px;
 	font-size: 16px;
 	font-weight: 700;
 	font-family: "Cinzel Decorative", cursive;
 	background-color: #424ef5;
 	color: #cdd307;
-	transition: all 0.75s linear;
+	transition: all 1s ease;
 }
 .odin-bio-left {
 	border-top-left-radius: 250px;
 	border-bottom-left-radius: 250px;
-	font-size: small;
+	font-size: 14px;
 	padding-left: 40px;
-	display: block;
+	color: #cdd307;
+	display: flex;
+	min-width: 400px;
+	flex-direction: column;
+	padding-top: 10px;
+	padding-left: 40px;
 }
 .odin-bio-right {
 	position: relative;
+	width: 300px;
+	height: 300px;
+	flex-shrink: 0;
 }
 .odin-bio img {
 	object-fit: none;
@@ -114,12 +121,11 @@ h1::first-letter {
 	transform: rotate(-360deg);
 }
 
-.odin-bio div {
-	width: 300px;
-	height: 300px;
-}
-.the-realms h3 {
+.the-realms h2 {
+	text-decoration: underline;
 	text-align: center;
+	font-size: 30px;
+	color: #cdd307;
 }
 .realms {
 	display: flex;
@@ -128,33 +134,63 @@ h1::first-letter {
 	justify-content: center;
 	padding: 20px;
 }
-.realms div {
+.realm-pics {
 	border: 5px solid black;
 	border-radius: 35px;
-	height: 325px;
+	height: 180px;
 	width: 300px;
 	font-size: small;
+	position: relative;
+	display: flex;
+	overflow: hidden;
 }
-.realms p {
-	width: 250px;
-	text-align: center;
-	margin: auto;
-	margin-top: 12px;
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	position: absolute;
+	padding: 20px;
+	inset: 0;
+	background-color: rgba(66, 69, 67, 0.7);
+	color: #cdd307;
 }
 .realms img {
-	width: 300px;
-	height: 150px;
-	border-top-left-radius: 30px;
-	border-top-right-radius: 30px;
+	object-fit: cover;
+	object-position: center;
+	width: 350px;
+	height: 175px;
+	border-radius: 30px;
+}
+.realms img,
+.realms .content {
+	transition: 0.5s ease-in-out;
+}
+.realm-pics .content.fade {
+	opacity: 0;
+}
+.realm-pics:hover .content.fade {
+	opacity: 1;
+}
+.realm-pics:hover img.blur {
+	filter: blur(5px);
+}
+.realm-pics h4 {
+	margin: auto;
+	margin-bottom: 4px;
 }
 .quote-sec {
 	display: flex;
 	flex-direction: column;
 	border: 2px solid black;
+	font-family: "Splash", cursive;
+	font-size: 30px;
+	color: #cdd307;
 	border-radius: 30px;
 	padding: 30px;
 	margin-top: 200px;
 	margin-bottom: 200px;
+	background-color: rgba(66, 69, 67, 0.7);
 }
 .quote p {
 	text-align: left;
@@ -163,15 +199,57 @@ h1::first-letter {
 .sig {
 	margin: auto;
 }
-.sig:hover {
-	font-family: "Splash", cursive;
-	font-size: 30px;
-	color: #cdd307;
-
-	transition: 1.5s ease-out;
+.cta {
+	margin-top: 200px;
+	margin-bottom: 200px;
 }
-
+.cta-banner {
+	border: 2px solid black;
+	border-radius: 30px;
+	padding: 25px;
+	background-color: rgba(66, 69, 67, 0.7);
+}
+.cta-banner p {
+	color: #cdd307;
+	font-size: 20px;
+}
+#join-val {
+	margin: auto;
+	margin-top: 10px;
+	font-size: 16px;
+	padding: 6px;
+	border-radius: 30px;
+	font-family: "Cinzel Decorative", cursive;
+	color: #cdd307;
+	background-color: var(--background-color);
+	border: none;
+	font-weight: 700;
+	position: relative;
+	--border-size: 2px;
+	--background-color: rgb(57, 116, 189);
+}
+#join-val::before {
+	content: "";
+	border-radius: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	border: var(--border-size) solid var(--background-color);
+}
+#join-val:hover::before,
+#join-val:focus::before {
+	top: calc(var(--border-size) * -2);
+	left: calc(var(--border-size) * -2);
+	right: calc(var(--border-size) * -2);
+	bottom: calc(var(--border-size) * -2);
+}
 footer {
 	display: flex;
+	gap: 20px;
 	font-size: small;
+	color: #cdd307;
+	background-color: rgba(66, 69, 67, 0.5);
 }
